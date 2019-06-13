@@ -1,0 +1,39 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");
+		
+		int arrlong = int.Parse(Console.ReadLine());
+		int [] arr = new int [arrlong];
+		for	(int i = 0 ;i< (arr.Length);i++)
+		{
+			Console.WriteLine("please enter a number : ");
+			arr[i] = int.Parse(Console.ReadLine());
+		}
+			
+	Console.WriteLine(Array (arr));
+		
+	}
+		public static bool Array (int [] array)
+		{
+			bool answer = false;
+			for (int i = 0;i < (array.Length-2) ;i++)
+			{
+				if (array [i+1] <= array [i] || array [i+1] >= array [i+2])
+				{
+					answer = false ;
+					return answer;
+				}
+				
+				else
+					answer = true;
+					
+				
+			}
+			return answer;
+		}
+	
+}
